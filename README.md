@@ -1,0 +1,1 @@
+This is a project from the odin project curriculum to practice javascript and jquery techniques. I will reflect on the project after completion.
