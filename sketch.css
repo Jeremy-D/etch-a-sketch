@@ -1,0 +1,83 @@
+/*===================================
+
+Reset 
+
+===================================*/
+
+* {
+    margin:0;
+    padding:0;
+}
+
+/*===================================
+
+general
+
+===================================*/
+
+body {
+	/*background-color:#d7a7e8;*/
+	background-color: #9999ff
+}
+
+/*===================================
+
+nav
+
+===================================*/
+/*
+#sidebar {
+    float:left;
+    width:200px;
+    height:100%;
+    background:#ddd;
+}
+
+#main-content {
+    margin-left:150px;
+    display:inline-block;
+    background:violet;
+}
+
+*/
+#navBar {
+	height:100px;
+	width:100%;
+	position:relative;
+	background-color:#e9cbf4;
+	top:-20px;
+	margin-bottom:20px;
+}
+
+
+button {
+	height:30px;
+	display:inline-block;
+	margin:30px 0 0 20px;
+	border-radius:5px;
+	background-color:#fff;
+
+
+}
+#container {
+    background-color: #2c8c87;
+    height: 400px;
+    width: 400px;
+    border-radius:5px;
+    vertical-align: middle;
+    position:relative;
+    margin:0 auto;
+    border-radius:5px;
+}
+.unit {
+    background-color: #68ffd6;
+    height: 23px;
+    width: 23px;
+    margin: 1px;
+    display: inline-block;
+    float: left;
+    border-radius:2px;
+
+}
+
+
