@@ -6,6 +6,7 @@ $(document).ready(function() {
             unit.appendTo('#container'); 
         };
     };
+    
     //drawing function
     $('.unit').mouseenter(function(){
 		$(this).css('background-color','yellow');
@@ -36,6 +37,8 @@ $(document).ready(function() {
 
     //erase drawing by reseting color to default bluish color
     document.getElementById('erase').onclick = function(){
+
+
         $('.unit').hover(function(){
         
         $('.unit').mouseenter(function(){
@@ -66,6 +69,7 @@ $(document).ready(function() {
 
     //default draw again after hitting a different button
     document.getElementById('draw').onclick = function(){
+
     	$('unit').hover(function(){
 
     	$('unit').mouseenter(function(){
