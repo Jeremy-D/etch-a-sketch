@@ -7,6 +7,7 @@ $(document).ready(function() {
             var unit = $("<div class='unit'></div>");
             unit.appendTo('#container'); 
         }
+        
     }
     //drawing function for clear button
     function draw () {
@@ -47,9 +48,6 @@ var gridsquares = document.querySelectorAll('.unit');
 erase
 
 ========================*/
-//console.log(gridsquares);
-
-
 //erase function
 rainbowBackground = false;
 
@@ -71,7 +69,6 @@ var clickToErase = function clickToErase() {
 	}
 }
 
-//clickToErase();
 //erase button functionality
 var erase = document.querySelector('#erase');
 erase.onclick = clickToErase;
@@ -91,18 +88,13 @@ function drawFunction () {
 	this.classList.remove('rainbow-background');
 	this.classList.add('mouseleave');
 	this.classList.add('draw');
-
-	console.log('draw');
-
 }
 
 //add event listener to draw
 var clickToDraw = function clickToDraw() {
 	for (var i=0; i<gridsquares.length; i++) {
-		//gridsquares[i].style.backgroundColor = "#68ffd6";
 		gridsquares[i].onmouseleave = drawFunction;
 	}
-	//rainbowBackground = false;
 }
 
 clickToDraw();
@@ -127,12 +119,9 @@ function randomHsl () {
 //add event listener to randomcolor
 function clickToRandomColor() {
 	for (var i=0; i<gridsquares.length; i++) {
-		//gridsquares[i].onmouseover = randomHsl;
-		// if (element.classList.contains('draw') && ) {
 			if (rainbowBackground === false) {
 			gridsquares[i].classList.add('rainbow-background');
 			}
-		//}
 		gridsquares[i].onmouseleave = randomHsl;
 	}
 	rainbowBackground = true;
@@ -141,9 +130,6 @@ function clickToRandomColor() {
 //random color button functionality
 var rainbow = document.querySelector('#rainbow');
 rainbow.onclick = clickToRandomColor;
-
-
-
 
 
 

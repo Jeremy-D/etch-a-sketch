@@ -63,9 +63,6 @@ var gridsquares = document.querySelectorAll('.unit');
 erase
 
 ========================*/
-//console.log(gridsquares);
-
-
 //erase function
 rainbowBackground = false;
 
@@ -77,7 +74,6 @@ function eraseFunction() {
 	if (rainbowBackground === true) {
 		this.classList.add('rainbow-background')
 	}
-	console.log('erase');
 }
 
 //add event listener to erase
@@ -107,18 +103,14 @@ function drawFunction () {
 	this.classList.remove('rainbow-background');
 	this.classList.add('mouseleave');
 	this.classList.add('draw');
-
-	console.log('draw');
-
 }
 
 //add event listener to draw
 var clickToDraw = function clickToDraw() {
 	for (var i=0; i<gridsquares.length; i++) {
-		//gridsquares[i].style.backgroundColor = "#68ffd6";
+		
 		gridsquares[i].onmouseleave = drawFunction;
 	}
-	//rainbowBackground = false;
 }
 
 clickToDraw();
@@ -143,12 +135,9 @@ function randomHsl () {
 //add event listener to randomcolor
 function clickToRandomColor() {
 	for (var i=0; i<gridsquares.length; i++) {
-		//gridsquares[i].onmouseover = randomHsl;
-		// if (element.classList.contains('draw') && ) {
 			if (rainbowBackground === false) {
 			gridsquares[i].classList.add('rainbow-background');
 			}
-		//}
 		gridsquares[i].onmouseleave = randomHsl;
 	}
 	rainbowBackground = true;
@@ -158,8 +147,60 @@ function clickToRandomColor() {
 var rainbow = document.querySelector('#rainbow');
 rainbow.onclick = clickToRandomColor;
 
+// /*========================
+
+// disco
+
+// ========================*/
+// function disco() {
+// 	var randomNum = Math.floor(Math.random()*300);
+// 	var randomColor = "hsl("+randomNum+", 100%, 50%)";
+// 	//this.style.backgroundColor = randomColor;
+// 	document.body.style.backgroundColor = randomColor;
+//  }
+// discoOn = true;
+
+// // function setDisco() {
+// // 	if(discoOn === true) {
+// // 		setInterval(disco, 1000);
+// // 		discoOn = false;
+// // 	} else {
+// // 		clearInterval(disco);
+// // 		discoOn = true;
+// // 	}
+// // }
+
+// function setDisco() {
+// 	setInterval(disco, 1000);
+// }
+
+// function stopDisco(){
+// 	clearInterval(disco);
+// }
 
 
+// //add event listener to disco
+// function clickToDisco() {
+// 		setDisco();
+// 		discoOn = true;
+// 	}
+
+// function clickToStopDisco(){
+// 	stopDisco();
+// 	discoOn = false;
+// }
+
+// function discoToggle() {
+// 	if (discoOn === true){
+// 		clickToDisco;
+// 	} else {
+// 		clickToStopDisco;
+// 	}
+// }
+
+// //disco button functionallity
+// var discoClick = document.querySelector('#disco');
+// discoClick.onclick = discoToggle;
 
 });
 
